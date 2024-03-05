@@ -1,0 +1,1218 @@
+{%load static%}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+
+<!-- Mirrored from html.modernwebtemplates.com/comfort/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Aug 2023 08:52:39 GMT -->
+<head>
+	<link rel="shortcut icon" href="{%static 'images/logos.png'%}" type="image/x-icon">
+	<title>EngineersDuniya+</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="{%static 'css/animations.css'%}">
+	<link rel="stylesheet" href="{%static 'css/fonts.css'%}">
+	<link rel="stylesheet" href="{%static 'css/main.css'%}" class="color-switcher-link">
+	<script src="{%static 'js/vendor/modernizr-2.6.2.min.js'%}"></script>
+
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<script src="js/vendor/jquery-1.12.4.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<!-- <div class="preloader">
+		<div class="preloader_image"></div>
+	</div> -->
+
+
+	<!-- Floating Icons Start -->
+
+    <style>
+      
+
+        /* .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        } */
+  
+        .floating-icons a.whatsapp {
+            position: fixed;
+            z-index: 1000;
+            bottom: 70px;
+            right: 20px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366; /* WhatsApp color */
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+  
+        .floating-icons a.contact {
+            position: fixed;
+            z-index: 1000;
+            bottom: 70px;
+            left: 20px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366; /* WhatsApp color */
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+  
+        .floating-icons a.contact {
+            background-color: #34B7F1; /* Contact color */
+        }
+  
+        .floating-icons a:hover {
+            background-color: #128C7E; /* WhatsApp color on hover */
+        }
+  
+        .floating-icons a.contact:hover {
+            background-color: #1E87F0; /* Contact color on hover */
+        }
+      </style>
+  
+      <div class="floating-icons">
+        <a class="whatsapp" href="https://api.whatsapp.com/send?phone=9120775690" target="_blank" title="Chat on WhatsApp">
+            <!-- <i class="fa fa-whatsapp"></i> -->
+			<img src="{%static 'images/engineers/g3.gif'%}" style="padding-bottom: 3px;" alt="">
+        </a>
+        <a class="contact" href="tel:+919120775690" title="Contact Us">
+            <!-- <i class="fa fa-phone"></i> -->
+			<img src="{%static 'images/engineers/g5.gif'%}" style="padding-bottom: 3px;" alt="">
+        </a>
+      </div>
+
+    <!-- Floating Icons End -->
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">
+				<i class="rt-icon2-cross2"></i>
+			</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="post" class="searchform search-form form-inline" action="">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="theme_button">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls with_padding">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div>
+	<!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<section class="page_topline with_search ls ms section_padding_top_5 section_padding_bottom_5 table_section">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8 text-center text-sm-left">
+							<p class="greylinks">
+					<a class="social-icon soc-facebook" href="#" title="Facebook"></a>
+					<a class="social-icon soc-instagram" href="#" title="Instagram"></a>
+					<a class="social-icon soc-twitter" href="#" title="Twitter"></a>
+					<a class="social-icon soc-google" href="#" title="Google"></a>
+					<a class="social-icon soc-youtube" href="#" title="Youtube"></a>
+				</p>
+						</div>
+						<div class="col-sm-4 text-center text-sm-right">
+							<a href="/contact/" class="theme_button color1" style="margin: 0; padding:8px;">Enquiry Now</a>
+
+							<!-- <div class="widget widget_search">
+								<form method="get" class="searchform form-inline" action="https://html.modernwebtemplates.com/comfort/">
+									<div class="form-group-wrap">
+										<div class="form-group margin_0">
+											<label class="sr-only" for="topline-search">Search for:</label>
+											<input id="topline-search" type="text" value="" name="search" class="form-control" placeholder="Search">
+										</div>
+										<button type="submit" class="theme_button">Search</button>
+									</div>
+								</form>
+							</div> -->
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<header class="page_header header_white toggler_right">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 display_table">
+							<div class="header_left_logo display_table_cell">
+								<a href="/" class="logo top_logo">
+									<img src="{%static 'images/logos.png'%}" style="height: 80px;" alt="">
+									<span class="logo_text">
+										<span class="big">Engineers Duniya
+											<span class="highlight2">+</span>
+										</span>
+										<span class="small-text lightgrey">Software Solutions</span>
+									</span>
+								</a>
+							</div>
+
+							<div class="header_mainmenu display_table_cell text-right">
+								<!-- main nav start -->
+								<nav class="mainmenu_wrapper">
+									<ul class="mainmenu nav sf-menu">
+										<li class="active">
+											<a href="/">Home</a>
+										</li>
+										<li>
+											<a href="/about/">About</a>
+										</li>
+
+										<li>
+											<a href="#">Our Services</a>
+											<ul>
+												
+												<li>
+													<a href="/services/">All Services</a>
+												</li>
+
+												
+												<li>
+													<a href="/website/">Website</a>
+													<!-- <ul>
+														<li>
+															<a href="shop-right.html">Shop</a>
+														</li>
+														<li>
+															<a href="shop-product-right.html">Single Product</a>
+														</li>
+														<li>
+															<a href="shop-cart-right.html">Shopping Cart</a>
+														</li>
+														<li>
+															<a href="shop-checkout-right.html">Checkout</a>
+														</li>
+														<li>
+															<a href="shop-register.html">Registration</a>
+														</li>
+													</ul> -->
+												</li>
+												<!-- eof shop -->
+
+												<li>
+													<a href="/mobile-app/">Mobile Applications</a>
+												</li>
+
+												<li>
+													<a href="/graphics-designing/">Graphics designing</a>
+												</li>
+
+												<li>
+													<a href="/digital-marketing/">Digital Marketing</a>
+												</li>
+
+												<!-- events -->
+												<li>
+													<a href="/seo/">SEO</a>
+													<!-- <ul>
+														<li>
+															<a href="events-left.html">Left Sidebar</a>
+														</li>
+														<li>
+															<a href="events-right.html">Right Sidebar</a>
+														</li>
+														<li>
+															<a href="events-full.html">Full Width</a>
+														</li>
+														<li>
+															<a href="event-single-left.html">Single Event</a>
+															<ul>
+																<li>
+																	<a href="event-single-left.html">Left Sidebar</a>
+																</li>
+																<li>
+																	<a href="event-single-right.html">Right Sidebar</a>
+																</li>
+																<li>
+																	<a href="event-single-full.html">Full Width</a>
+																</li>
+															</ul>
+														</li>
+													</ul> -->
+												</li>
+												<!-- eof events -->
+
+												<li>
+													<a href="/social-media/">Social Media</a>
+													<!-- <ul>
+														<li>
+															<a href="team.html">Team 1</a>
+														</li>
+														<li>
+															<a href="team2.html">Team 2</a>
+														</li>
+														<li>
+															<a href="team-single.html">Team Member</a>
+														</li>
+													</ul> -->
+												</li>
+
+												<!-- <li>
+													<a href="services.html">Services</a>
+													<ul>
+														<li>
+															<a href="services.html">Services</a>
+														</li>
+														<li>
+															<a href="service-single.html">Single Service</a>
+														</li>
+													</ul>
+												</li>
+
+												<li>
+													<a href="comingsoon1.html">Comingsoon</a>
+													<ul>
+														<li>
+															<a href="comingsoon1.html">Comingsoon</a>
+														</li>
+														<li>
+															<a href="comingsoon2.html">Comingsoon 2</a>
+														</li>
+													</ul>
+												</li>
+
+												<li>
+													<a href="faq.html">FAQ</a>
+													<ul>
+														<li>
+															<a href="faq.html">FAQ</a>
+														</li>
+														<li>
+															<a href="faq2.html">FAQ 2</a>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<a href="404.html">404</a>
+													<ul>
+														<li>
+															<a href="404.html">404</a>
+														</li>
+														<li>
+															<a href="4042.html">404 2</a>
+														</li>
+													</ul>
+												</li> -->
+
+											</ul>
+										</li>
+										<!-- eof pages -->
+
+										
+										<!-- blog -->
+										<li>
+											<a href="/blog-grid/">Blog</a>
+											
+										<!-- contacts -->
+										<li>
+											<a href="/contact/">Contact</a>
+											
+										</li>
+										<!-- eof contacts -->
+									</ul>
+								</nav>
+								<!-- eof main nav -->
+								<!-- header toggler -->
+								<span class="toggle_menu">
+									<span></span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			{%block body%}
+
+			<section class="ds black section_padding_top_5 section_padding_bottom_5 section_bottom_overlap">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 text-sm-center text-md-left">
+							<div class="media small-teaser teaser inline-block text-left">
+								<div class="media-left media-middle">
+									<div class="teaser_icon highlight2 size_normal">
+										<i class="fa fa-phone"></i>
+									</div>
+								</div>
+								<div class="media-body media-middle grey">
+									<span class="small-text">Call Us Today:</span>
+									<br>
+									<span class="fontsize_20 bold">+91 9120775690</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 text-sm-center text-md-left">
+							<div class="media small-teaser teaser inline-block text-left">
+								<div class="media-left media-middle">
+									<div class="teaser_icon highlight2 size_normal">
+										<i class="fa fa-map-marker"></i>
+									</div>
+								</div>
+								<div class="media-body media-middle grey">
+									<span class="small-text">Our location:</span>
+									<br>
+									<span class="fontsize_20 bold">Noida Sector-3</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 text-sm-center text-md-left">
+							<div class="media small-teaser teaser inline-block text-left">
+								<div class="media-left media-middle">
+									<div class="teaser_icon highlight2 size_normal">
+										<i class="fa fa-clock-o"></i>
+									</div>
+								</div>
+								<div class="media-body media-middle grey">
+									<span class="small-text">Open hours:</span>
+									<br>
+									<span class="fontsize_20 bold">Mon - Sat, 9 am - 6 pm</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="intro_section page_mainslider ds">
+				<div class="flexslider" data-nav="false">
+					<ul class="slides">
+
+						<li>
+							<img src="{%static 'images/engineers/e15.jpg'%}" alt="">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<div class="slide_description_wrapper">
+											<div class="slide_description">
+												<!-- <div class="intro-layer" data-animation="fadeInUp">
+													<h2>
+														For People Who Love
+														<br> Their Home
+													</h2>
+												</div>
+												<div class="intro-layer" data-animation="fadeInUp">
+													<p>Comfort+ first opened its doors in 2006, in Miami, Florida. Since our inception, we have orked meticulously to improve both our internal processes and our outward appearance.</p>
+												</div> -->
+												<!-- <div class="intro-layer" data-animation="fadeInUp">
+													<a href="about.html" class="theme_button color1">More Information</a>
+												</div> -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<!-- <li>
+							<img src="{%static 'images/engineers/e4.jpg'%}" alt="">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<div class="slide_description_wrapper">
+											<div class="slide_description">
+												<div class="intro-layer" data-animation="fadeInUp">
+													<h2>
+														Quality Doesn’t Have
+														<br> To Be Expensive
+													</h2>
+												</div>
+												<div class="intro-layer" data-animation="fadeInUp">
+													<p>Comfort+ first opened its doors in 2006, in Miami, Florida. Since our inception, we have orked meticulously to improve both our internal processes and our outward appearance.</p>
+												</div>
+												<div class="intro-layer" data-animation="fadeInUp">
+													<a href="about.html" class="theme_button color1">More Information</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<img src="{%static 'images/engineers/e3.jpg'%}" alt="">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-12 text-center">
+										<div class="slide_description_wrapper">
+											<div class="slide_description">
+												<div class="intro-layer" data-animation="fadeInUp">
+													<h2>
+														Furniture Inspired By
+														<br> Innovation
+													</h2>
+												</div>
+												<div class="intro-layer" data-animation="fadeInUp">
+													<p>Comfort+ first opened its doors in 2006, in Miami, Florida. Since our inception, we have orked meticulously to improve both our internal processes and our outward appearance.</p>
+												</div>
+												<div class="intro-layer" data-animation="fadeInUp">
+													<a href="about.html" class="theme_button color1">More Information</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li> -->
+
+					</ul>
+				</div>
+
+			</section>
+
+			<section id="about" class="ls section_padding_100">
+				<div class="container">
+					<div class="row display_table_md">
+						<div class="col-md-6 text-center display_table_cell_md">
+							<img src="{%static 'images/engineers/e35.jpg'%}" alt="" />
+						</div>
+						<div class="col-md-6 display_table_cell_md">
+							<h2 class="section_header">
+								About Us?
+							</h2>
+							<hr class="divider_30_2 main_bg_color2">
+							<p>"Welcome to our world of Information Technology and Software  Solutions, where innovation and reliability converge to empower your digital journey. With a deep-rooted passion for cutting-edge technology and over 5 years of industry experience, we at Engineers Duniya stand as your trusted partner in navigating the complexities of the digital realm."</p>
+							<p class="medium">
+								Choose us for your IT software and website solutions, and experience the difference that our expertise, dedication, and commitment to excellence can make for your business.
+							</p>
+							
+							<div class="row regular">
+								<div class="col-sm-6">
+									<ul class="list2">
+										<li>Expertise</li>
+										<li>Customization</li>
+										<li>Quality</li>
+										<li>Results-driven</li>
+									</ul>
+								</div>
+								<div class="col-sm-6">
+									<ul class="list2">
+										<li>Collaboration</li>
+										<li>Transparency</li>
+										<li>Support</li>
+									</ul>
+								</div>
+							</div>
+							<a href="about.html" class="theme_button color2">Read more</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="products" class="ls ms section_padding_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2 class="section_header">
+								Our Services
+							</h2>
+							<hr class="divider_30_2 main_bg_color2">
+							<p>
+								Certainly! Here's a list of services that Engineers Duniya might offer: 
+							</p>
+
+							<div class="owl-carousel topmargin_60" data-nav="true" data-dots="false" data-responsive-lg="3" data-loop="true" data-margin="60">
+								<article class="vertical-item product-item">
+									<div class="item-media bottommargin_30">
+										<img src="{%static 'images/engineers/e15.jpg'%}" alt="" />
+									</div>
+									<div class="item-content">
+										<h4>
+											<a href="/website/">Website Development</a>
+										</h4>
+										<p>
+											Welcome to Engineers Duniya - Your Partner in Web Development Solutions 
+										</p>
+									</div>
+								</article>
+
+								<article class="vertical-item product-item">
+									<div class="item-media bottommargin_30">
+										<img src="{%static 'images/engineers/e43.jpg'%}" alt="" />
+									</div>
+									<div class="item-content">
+										<h4>
+											<a href="/mobile-applications/">Mobile Applications</a>
+										</h4>
+										<p>
+											Welcome to Engineers Duniya - Your Partner in Mobile App Development Solutions
+										</p>
+									</div>
+								</article>
+
+								<article class="vertical-item product-item">
+									<div class="item-media bottommargin_30">
+										<img src="{%static 'images/engineers/c10.jpg'%}" alt="" />
+									</div>
+									<div class="item-content">
+										<h4>
+											<a href="/graphics-designing/">Graphics Designing</a>
+										</h4>
+										<p>
+											Welcome to Engineers Duniya - Your Partner in Creative Design Solutions
+										</p>
+									</div>
+								</article>
+
+								<article class="vertical-item product-item">
+									<div class="item-media bottommargin_30">
+										<img src="{%static 'images/engineers/c8.jpg'%}" alt="" />
+									</div>
+									<div class="item-content">
+										<h4>
+											<a href="/digital-marketing/">Digital Marketing</a>
+										</h4>
+										<p>
+											Welcome to Engineers Duniya - Your Digital Marketing Partner 
+										</p>
+									</div>
+								</article>
+
+								<article class="vertical-item product-item">
+									<div class="item-media bottommargin_30">
+										<img src="{%static 'images/engineers/c9.jpg'%}" alt="" />
+									</div>
+									<div class="item-content">
+										<h4>
+											<a href="/seo/">SEO</a>
+										</h4>
+										<p>
+											Welcome to Engineers Duniya - Your Trusted SEO Partner 
+										</p>
+									</div>
+								</article>
+
+								<article class="vertical-item product-item">
+									<div class="item-media bottommargin_30">
+										<img src="{%static 'images/engineers/c12.jpg'%}" alt="" />
+									</div>
+									<div class="item-content">
+										<h4>
+											<a href="/social-media/">Social Media</a>
+										</h4>
+										<p>
+											Welcome to Engineers Duniya - Your Social Media Marketing Experts
+										</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- <section id="faq" class="ls overflow_hidden half_section section_padding_top_150 section_padding_bottom_150 columns_padding_80">
+				<div class="image_cover image_cover_left">
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6">
+							<img src="{%static 'images/half_image.jpg'%}" alt="">
+						</div>
+						<div class="col-md-6">
+
+							<h2 class="section_header">
+								Frequently Asked Questions
+							</h2>
+							<hr class="divider_30_2 main_bg_color2">
+							<p>
+					T-bone frankfurter prosciutto bacon ribeye ham hock doner rump chicken ground round landjaeger shankle pancetta. 
+				</p>
+
+							<div class="panel-group" id="accordion1">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion1" href="#collapse1">
+												<i class="fa fa-comment"></i>
+												what's trending in furniture for the fast approaching 2017?
+											</a>
+										</h4>
+									</div>
+									<div id="collapse1" class="panel-collapse collapse in">
+										<div class="panel-body">
+											Biltong bacon pancetta corned beef filet mignon andouille cow burgdoggen. Pork chop beef ball tip shank, brisket kielbasa turkey andouille biltong alcatra filet mignon. Swine rump meatloaf pork alcatra strip steak turducken.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion1" href="#collapse2" class="collapsed">
+												<i class="fa fa-comment"></i>
+												what are 5 ways to boost workplace productivity?
+											</a>
+										</h4>
+									</div>
+									<div id="collapse2" class="panel-collapse collapse">
+										<div class="panel-body">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facere doloremque ut dolores laudantium nihil at, repudiandae est numquam fuga tempora totam sequi quidem saepe officiis sint beatae, magni fugit.
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion1" href="#collapse3" class="collapsed">
+												<i class="fa fa-comment"></i>
+												what loft remodel in downtown miami?
+											</a>
+										</h4>
+									</div>
+									<div id="collapse3" class="panel-collapse collapse">
+										<div class="panel-body">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. At nobis omnis delectus, asperiores quo obcaecati et iste corporis necessitatibus tempora aspernatur doloribus. Ut deleniti commodi dicta distinctio sit enim quidem!
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+					</div>
+				</div>
+
+			</section> -->
+
+
+			<section id="team" class="ls ms section_padding_top_130 section_padding_bottom_130">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2 class="section_header">
+								Our Team of Professionals
+							</h2>
+							<hr class="divider_30_2 main_bg_color2">
+							<p>
+								"Our Expertise Team: Driving Digital Innovation Forward"
+							</p>
+							<p>At Engineers Duniya, our team stands as the cornerstone of our success. Comprising seasoned professionals with diverse backgrounds and specialized skills, we come together with a shared passion for driving digital innovation forward.</p>
+
+							<div class="owl-carousel team-carousel topmargin_60" data-nav="true" data-dots="false" data-responsive-lg="3" data-loop="true" data-margin="60">
+								
+								{%for i in teamData%}
+								<article class="vertical-item">
+									<div class="item-media bottommargin_40">
+										<img src="{{i.image.url}}" alt="" class="round" />
+									</div>
+									<div class="item-content">
+										<h4 class="bottommargin_0">
+											<a href="#">{{i.name}}</a>
+										</h4>
+										<p class="small-text highlight2">{{i.designation}}</p>
+										<p>
+											{{i.about}}
+										</p>
+										<!-- <p class="greylinks">
+											<a class="social-icon soc-facebook" href="#" title="Facebook"></a>
+											<a class="social-icon soc-instagram" href="#" title="Instagram"></a>
+											<a class="social-icon soc-twitter" href="#" title="Twitter"></a>
+											<a class="social-icon soc-google" href="#" title="Google"></a>
+											<a class="social-icon soc-youtube" href="#" title="Youtube"></a>
+										</p> -->
+									</div>
+								</article>
+								{%endfor%}
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{%for i in messages%}
+			<script>
+				alert("{{i}}")
+			</script>
+			{%endfor%}
+
+			<section id="call_back" class="ds page_contact2 parallax section_padding_100">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2 class="section_header">
+								Request a Call Back
+							</h2>
+							<hr class="divider_30_2 main_bg_color2">
+
+							<form class="contact-form row columns_margin_bottom_20 topmargin_60" method="post" action="/call-back-details/">
+								{%csrf_token%}
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="consultation-name">Full Name
+											<span class="required">*</span>
+										</label>
+										<i class="fa fa-user highlight2" aria-hidden="true"></i>
+										<input type="text" aria-required="true" size="30" value="" name="name" id="consultation-name" class="form-control" placeholder="Full Name">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="consultation-phone">Phone Number
+											<span class="required">*</span>
+										</label>
+										<i class="fa fa-phone highlight2" aria-hidden="true"></i>
+										<input type="text" aria-required="true" size="30" value="" name="phone" id="consultation-phone" class="form-control" placeholder="Phone Number">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<label for="consultation-email">Email Address
+											<span class="required">*</span>
+										</label>
+										<i class="fa fa-envelope highlight2" aria-hidden="true"></i>
+										<input type="email" aria-required="true" size="30" value="" name="email" id="consultation-email" class="form-control" placeholder="Email Address">
+									</div>
+								</div>
+
+								<div class="col-sm-12">
+
+									<div class="form-group">
+										<label for="consultation-message">Message</label>
+										<i class="fa fa-flag highlight2" aria-hidden="true"></i>
+										<textarea aria-required="true" rows="4" cols="45" name="message" id="consultation-message" class="form-control" placeholder="Message"></textarea>
+									</div>
+								</div>
+
+								<div class="col-sm-12 bottommargin_0">
+
+									<div class="contact-form-submit topmargin_10">
+										<button type="submit" id="consultation-submit" name="contact_submit" class="theme_button color1 wide_button">Send now</button>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- <section id="review" class="ls section_padding_top_150 section_padding_bottom_150">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-10 col-lg-offset-1 text-center">
+
+							<h2 class="section_header">
+								Testimonials
+							</h2>
+							<hr class="divider_30_2 main_bg_color2">
+
+							<div class="owl-carousel testimonials-owl-content topmargin_60" data-responsive-lg="1" data-responsive-md="1" data-responsive-sm="1" data-responsive-xs="1" data-loop="true" data-margin="20" data-dots="false" data-nav="true">
+								<blockquote class="with_quotes">
+									Picanha rump sausage swine hamburger strip steak filet mignon. Chicken meatball jerky bacon pastrami cow brisket rump. Flank shankle porchetta tenderloin, capicola bacon tail andouille shoulder cow kielbasa chuck bresaola biltong.
+								</blockquote>
+
+								<blockquote class="with_quotes">
+									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisi. Nullam ultrices quam est, ac fringilla ante egestas sed. Proin ac cursus odio, sit amet pellentesque enim.
+								</blockquote>
+
+								<blockquote class="with_quotes">
+									Donec et porttitor mauris, sit amet volutpat nunc. Nunc tincidunt et sem venenatis placerat. Donec sit amet interdum massa, vel blandit mi. Praesent consequat enim quis lacus tristique, a vulputate nisl pulvinar.
+								</blockquote>
+
+							</div>
+
+							<div class="owl-carousel testimonials-owl-dots topmargin_20" data-responsive-lg="3" data-responsive-md="3" data-responsive-sm="3" data-responsive-xs="3" data-center="true" data-loop="true" data-margin="30" data-touch-drag="false" data-mouse-drag="false">
+								<div>
+									<img src="{%static 'images/faces/01.jpg'%}" alt="" />
+									<div class="item-meta">
+										<h4 class="bottommargin_0">Miguel Nguyen</h4>
+										<p class="small-text highlight2">Client</p>
+									</div>
+								</div>
+
+								<div>
+									<img src="{%static 'images/faces/02.jpg'%}" alt="" />
+									<div class="item-meta">
+										<h4 class="bottommargin_0">Lucy Garrett</h4>
+										<p class="small-text highlight2">Client</p>
+									</div>
+								</div>
+
+								<div>
+									<img src="{%static 'images/faces/03.jpg'%}" alt="" />
+									<div class="item-meta">
+										<h4 class="bottommargin_0">Olivia Hopkins</h4>
+										<p class="small-text highlight2">Client</p>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section> -->
+
+			<section id="blog" class="ls ms section_padding_top_150 section_padding_bottom_130">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2 class="section_header">
+								Our Blog
+							</h2>
+							<hr class="divider_30_2 main_bg_color2">
+							<p>
+					Picanha spare ribs pariatur velit pork sirloin. Consequat capicola pastrami non, minim ribeye meatloaf consectetur pork loin ground round bacon quis t-bone labore.
+				</p>
+						</div>
+					</div>
+					<div class="row columns_margin_bottom_20 topmargin_60">
+						
+						{%for i in blogData%}
+						<div class="col-md-4 col-sm-6">
+							<article class="vertical-item content-padding with_background text-center overflow-hidden">
+								<div class="item-media">
+									<img src="{{i.image.url}}" alt="">
+
+									<div class="media-links">
+										<a href="/blog-single-left/{{i.id}}" class="abs-link"></a>
+									</div>
+
+								</div>
+								<div class="item-content">
+									<span class="entry-date small-text highlight2">
+										<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
+											{{i.date}}
+										</time>
+									</span>
+									<h4 class="entry-title" style="font-size: 20px;">
+										<a href="/blog-single-left/{{i.id}}">{{i.title|slice:"60"}}</a>
+									</h4>
+									<p>{{i.summery|slice:":100"}}</p>
+									<a href="/blog-single-left/{{i.id}}" class="theme_button color1 topmargin_10">Read more</a>
+								</div>
+							</article>
+						</div>
+						{%endfor%}
+
+						<!-- <div class="col-md-4 col-sm-6">
+							<article class="vertical-item content-padding with_background text-center overflow-hidden">
+								<div class="item-media">
+									<img src="{%static 'images/gallery/06.jpg'%}" alt="">
+
+									<div class="media-links">
+										<a href="blog-single-left.html" class="abs-link"></a>
+									</div>
+
+								</div>
+								<div class="item-content">
+									<span class="entry-date small-text highlight2">
+										<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
+											June 12, 2017
+										</time>
+									</span>
+									<h4 class="entry-title">
+										<a href="blog-single-left.html">Swine short loin boud spare ribs capi</a>
+									</h4>
+									<p>Tri-tip bacon salami pork chop pork loin leberkas ham hock venison pork belly prosciutto pancetta.</p>
+									<a href="blog-single-left.html" class="theme_button color1 topmargin_10">Read more</a>
+								</div>
+							</article>
+						</div>
+						<div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0">
+							<article class="vertical-item content-padding with_background text-center overflow-hidden">
+								<div class="item-media">
+									<img src="{%static 'images/gallery/07.jpg'%}" alt="">
+
+									<div class="media-links">
+										<a href="blog-single-left.html" class="abs-link"></a>
+									</div>
+
+								</div>
+								<div class="item-content">
+									<span class="entry-date small-text highlight2">
+										<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
+											June 12, 2017
+										</time>
+									</span>
+									<h4 class="entry-title">
+										<a href="blog-single-left.html">Ham venison spare ribs strip steak</a>
+									</h4>
+									<p>Shankle boudin pork loin, t-bone pastrami jerky beef. Filet mignon strip steak
+ doner meatball, porchetta biltong.</p>
+									<a href="blog-single-left.html" class="theme_button color1 topmargin_10">Read more</a>
+								</div>
+							</article>
+						</div> -->
+
+					</div>
+				</div>
+			</section>
+
+			<section id="map" class="ls ms" data-address="Rosebery House, 70 Rosebery Ave, Clerkenwell, London EC1R 4RR, UK">
+				<!-- marker description and marker icon goes here -->
+				<div class="map_marker_description">
+					<h3>Map Title</h3>
+					<p>Map description text</p>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14014.54367919717!2d77.30033245203964!3d28.580693594947913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45a2fec4393%3A0xaa5938d112af449e!2z4KS44KWH4KSV4KWN4KSf4KSwIDMsIOCkqOCli-Ckj-CkoeCkviwg4KSJ4KSk4KWN4KSk4KSwIOCkquCljeCksOCkpuClh-CktiAyMDEzMDE!5e0!3m2!1shi!2sin!4v1709449774744!5m2!1shi!2sin" width="100%" height="390" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<!-- <img class="map_marker_icon" src="{%static 'images/map_marker_icon.png'%}" alt=""> -->
+				</div>
+			</section>
+
+			<section class="cs main_color2 section_padding_top_5 section_padding_bottom_5">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 text-center text-md-right">
+							<div class="media small-teaser teaser inline-block text-left black">
+								<div class="media-left media-middle">
+									<div class="teaser_icon highlight size_normal">
+										<i class="fa fa-phone"></i>
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<span class="small-text">Call Us Today:</span>
+									<br>
+									<span class="fontsize_20 bold">+91 9120775690</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 text-center text-md-right">
+							<div class="media small-teaser teaser inline-block text-left black">
+								<div class="media-left media-middle">
+									<div class="teaser_icon highlight size_normal">
+										<i class="fa fa-map-marker"></i>
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<span class="small-text">Our location:</span>
+									<br>
+									<span class="fontsize_20 bold">New Delhi</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 text-center text-md-right">
+							<div class="media small-teaser teaser inline-block text-left black">
+								<div class="media-left media-middle">
+									<div class="teaser_icon highlight size_normal">
+										<i class="fa fa-clock-o"></i>
+									</div>
+								</div>
+								<div class="media-body media-middle">
+									<span class="small-text">Open hours:</span>
+									<br>
+									<span class="fontsize_20 bold">Mon - Sat, 9 am - 6 pm</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{%endblock%}
+
+			<footer class="page_footer ds section_padding_top_100 section_padding_bottom_65 columns_padding_25">
+				<div class="container">
+					<div class="row">
+
+						<div class="col-md-4 col-sm-12">
+							<div class="widget">
+								<a href="index-2.html" class="logo top_logo bottommargin_20">
+									<img src="{%static 'images/logos.png'%}" style="height: 80px; margin: 0 0 10px 10px; border-radius: 8px;" alt="">
+									<span class="logo_text">
+										<span class="big">Engineers Duniya
+											<span class="highlight2">+</span>
+										</span>
+										<span class="small-text lightgrey">Software Solutions</span>
+									</span>
+								</a>
+								<p class="grey">
+									Choose us for your IT software and website solutions, and experience the difference that our expertise, dedication, and commitment to excellence can make for your business."
+								</p>
+								<div>
+									<div class="media small-teaser inline-block">
+										<div class="media-left media-middle">
+											<i class="fa fa-map-marker highlight2" aria-hidden="true"></i>
+										</div>
+										<div class="media-body media-middle">
+											Noida Sector-3
+										</div>
+									</div>
+									<br>
+									<div class="media small-teaser inline-block">
+										<div class="media-left media-middle">
+											<i class="fa fa-phone highlight2" aria-hidden="true"></i>
+										</div>
+										<div class="media-body media-middle">
+											+91 9120775690
+										</div>
+									</div>
+									<br>
+									<div class="media small-teaser inline-block">
+										<div class="media-left media-middle">
+											<i class="fa fa-envelope highlight2" aria-hidden="true"></i>
+										</div>
+										<div class="media-body media-middle darklinks underlined-links">
+											<a href="#"><span class="__cf_email__" data-cfemail="04676b69626b76702f44777174746b76702a676b69">[email&#160;protected]</span></a>
+										</div>
+									</div>
+									<div class="media small-teaser inline-block">
+										<div class="media-left media-middle">
+											<i class="fa fa-internet-explorer highlight2" aria-hidden="true"></i>
+										</div>
+										<div class="media-body media-middle greylinks">
+											<a href="#">www.engineersduniya.com</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+							<div class="widget widget_recent_posts topmargin_20">
+
+								<h3 class="widget-title">Recent Posts</h3>
+
+								<ul class="media-list">
+
+									{%for i in blogData%}
+									<li class="media">
+										<div class="media-left media-middle">
+											<img src="{{i.image.url}}" alt="" />
+										</div>
+										<div class="media-body media-middle">
+											<h4>
+												<a href="/blog-single-left/{{i.id}}">
+													{{i.title}}
+												</a>
+											</h4>
+											<span class="entry-date highlight2 small-text">
+												<time class="entry-date" datetime="2017-03-13T08:50:40+00:00">
+													{{i.date}}
+												</time>
+											</span>
+										</div>
+									</li>
+
+									{%endfor%}
+									
+
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-6">
+
+							<div class="widget widget_mailchimp topmargin_20">
+
+								<h3 class="widget-title">Subscribe</h3>
+
+								<form action="/subscribtions/" method="post">
+									{%csrf_token%}
+									<div class="form-group">
+										<input name="email" type="email" class="mailchimp_email form-control" placeholder="Email Address">
+									</div>
+									<button type="submit" class="theme_button color1">Send</button>
+									<div class="response"></div>
+									<p>
+							Enter Email here to be updated. We promise not to send you spam!
+						</p>
+
+								</form>
+
+								<div class="darklinks topmargin_30">
+									<a href="#" class="social-icon border-icon soc-facebook"></a>
+									<a href="#" class="social-icon border-icon soc-instagram"></a>
+									<a href="#" class="social-icon border-icon soc-twitter"></a>
+									<a href="#" class="social-icon border-icon soc-google"></a>
+									<a href="#" class="social-icon border-icon soc-youtube"></a>
+								</div>
+
+							</div>
+
+
+						</div>
+
+					</div>
+				</div>
+			</footer>
+
+			<section class="ds page_copyright section_padding_15 with_top_border_container">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<p class="small-text grey">&copy; Copyright 2024 All Rights Reserved By Engineers Duniya</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- eof #box_wrapper -->
+	</div>
+	<!-- eof #canvas -->
+
+	<script data-cfasync="false" src="{%static '../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js'%}"></script>
+	<script src="{%static 'js/compressed.js'%}"></script>
+	<script src="{%static 'js/main.js'%}"></script>
+	<!-- <script src="{%static 'js/switcher.js'%}"></script> -->
+
+	<!-- Google Map Script -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4"></script>
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/comfort/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Aug 2023 08:53:55 GMT -->
+</html>
